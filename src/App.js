@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
-import "./App.css";
 import Home from "./component/Home.js";
+import About from "./component/About.js";
+import Services from "./component/Services.js";
+import Contact from "./component/Contact.js";
 
 function App() {
   return (
@@ -12,22 +14,22 @@ function App() {
               <Link to="home">Accueil</Link>
             </li>
             <li className="uk-active">
-              <Link to="home">A propos</Link>
+              <Link to="about">A propos</Link>
             </li>
             <li className="uk-active">
-              <Link to="home">Services</Link>
+              <Link to="services">Services</Link>
             </li>
             <li>
-              <Link to="home">Contacts</Link>
+              <Link to="contact">Contacts</Link>
             </li>
           </ul>
         </div>
       </nav>
       <Routes>
         <Route path="home" element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="home" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
